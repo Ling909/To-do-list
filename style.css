@@ -160,7 +160,7 @@ ul li.editMode label {
     margin: 30px 5px;
     padding: 0;
     transition: transform 0.2s;
-    animation: grow 1.5s 1.5s ease-out backwards;
+    animation: grow 1s 1s ease-out backwards;
 }
 
 .selected {
@@ -168,7 +168,7 @@ ul li.editMode label {
 }
 
 .firstColor {
-    background-color: #8c8cfc;
+    background-color: #ffb3b3;
 }
 
 .firstColor:hover {
@@ -176,7 +176,7 @@ ul li.editMode label {
 }
 
 .secondColor {
-    background-color: #ffb3b3;
+    background-color: #f09c58;
 }
 
 .secondColor:hover {
@@ -192,7 +192,7 @@ ul li.editMode label {
 }
 
 .forthColor {
-    background-color: #f09c58;
+    background-color: #8c8cfc;
 }
 
 .firstColor:hover {
