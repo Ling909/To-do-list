@@ -1,43 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO-DO List</title>
+    <title>To-do List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./style.css">
+
 </head>
+
 <body>
-    <header>
-        <div class="finishedTask">
 
-        </div>
-        <div class="deletedTask">
+    <!-- COLOR CHOOSE -->
+    <div id="newColor" class="text-center mt-3">
+        <ul>
+            <li class="firstColor selected"></li>
+            <li class="secondColor"></li>
+            <li class="thirdColor"></li>
+            <li class="forthColor"></li>
 
-        </div>
-    </header>
+        </ul>
+    </div>
     <main>
-        <!-- add new task items -->
-        <div>       
-        <form>
-        <h1>To-do List</h1>
-        <input type="text" class="newTask" placeholder="Add an item to the list">
-        <input type="number" min="1" max="31" placeholder="Date" required>
-        <input type="number" min="1" max="12" placeholder="Month" required>
-        <button type="submit"><img src="./assets/icon-add.svg" alt=""></button>
-        </form>
-        </div>
-        
-        <div>
-        <h2>My tasks sort by time</h2>    
-        </div>
-        
-        <section>
-        
-    
-        </section>
-    
 
-        </button>
+        <div class="container text-muted">
+            <h2 id="head" class="display-3 text-center mb-5">To-do List</h2>
+            <!-- ADD NEW ITEMS -->
+            <input class="form-control" id="new-task" type="text" placeholder="Add a new task">
+            <!-- TASK WORKING LIST -->
+            <div id="tasks-body">
+                <h3 id="doing" class="text-center">My tasks</h3>
+                <ul id="todo-container"></ul>
+                <footer id='activeTodo'></footer>
+            </div>
+        </div>
     </main>
+
+    <footer class="text-center foot">
+        <p>Let's get it done!</p>
+    </footer>
+
+    <script id="todo-template" type="text/x-handlebars-template">
+    <li class="todoItem">
+     <input type="checkbox" class="checkBox">
+     <label>{{label}}</label>
+     <input type="text" class="form-control">
+     <button class="delete"></button>
+     <button class="edit"></button>
+     <button class="down"></button>
+     <button class="up"></button>
+    </li>
+</script>
+    <script id="footer-template" type="text/x-handlebars-template">
+	<span id="todo-count">You have {{activeTodoCount}} {{activeTodoWord}} in the list</span>
+</script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js'></script>
+    <script src="./script.js"></script>
+
 </body>
+
 </html>
